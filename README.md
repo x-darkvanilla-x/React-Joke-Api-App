@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# Jokes Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The `Jokes` component is a React component that fetches and displays a random joke from the [Official Joke API](https://official-joke-api.appspot.com/). It allows users to copy the joke to their clipboard and fetch a new joke.
 
-Currently, two official plugins are available:
+## Features
+- Fetches a random joke on component mount and on user request.
+- Displays the joke setup and punchline in a card.
+- Allows users to copy the joke to their clipboard.
+- Stylish buttons for copying the joke and fetching a new joke.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+To use the `Jokes` component in your project, follow these steps:
 
-## Expanding the ESLint configuration
+1. Install the necessary dependencies:
+   ```bash
+   npm install @mui/icons-material @mui/material react
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Import the `Jokes` component into your project:
+   ```javascript
+   import { Jokes } from "./Jokes";
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Add the `Jokes` component to your JSX:
+   ```jsx
+   <Jokes />
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+## Usage
+Simply add the `<Jokes />` component to any part of your React application where you want to display a random joke.
+
+## Example
+```jsx
+import React from "react";
+import { Jokes } from "./Jokes";
+
+function App() {
+  return (
+    <div className="App">
+      <Jokes />
+    </div>
+  );
 }
+
+export default App;
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contributing
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or create a pull request.
+
+---
